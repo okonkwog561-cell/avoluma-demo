@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a20">
+<title>Avoluma — Crypto Payments Concept</title>
+<style>
+:root{--bg:#050a20;--mint:#1fffb0;--blue:#5c78ff;--text:#f5f7ff;--muted:#b7c5e7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 72% 20%,#102e68 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}header{display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,70px);border-bottom:1px solid #25345a;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-1px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--mint),var(--blue));color:#07132b;font-weight:900;font-size:25px;transform:rotate(-7deg)}
+.brand small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:2px}nav{display:flex;gap:20px;color:#dbe5ff;font-size:14px}
+.btn{display:inline-block;border:0;border-radius:30px;padding:13px 20px;font-weight:700;background:linear-gradient(100deg,var(--mint),#6478ff);color:#06112a;cursor:pointer}
+main{max-width:1200px;margin:auto;padding:52px clamp(18px,5vw,70px) 34px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;min-height:400px}
+.pill{display:inline-block;border:1px solid #6551b9;color:#d8d5ff;border-radius:25px;padding:9px 14px;font-size:12px;letter-spacing:1px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-2px;margin:22px 0 16px}.gradient{background:linear-gradient(90deg,#34ff8c,#14d4d7,#7d75ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;line-height:1.65;color:#c8d8fa;max-width:520px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.secondary{background:transparent;color:var(--text);border:1px solid #6879b4}
+.mascot{position:relative;min-height:350px;display:grid;place-items:center;overflow:hidden;border:1px solid #263f83;border-radius:28px;background:radial-gradient(circle at 52% 42%,#1c6eaa 0,#12265a 34%,#070e28 70%)}
+.planet{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#66f8ee,#1766a8 48%,#101742 75%);box-shadow:0 0 45px #1688e9;right:7%;top:14%}
+.alien{position:relative;z-index:2;font-size:clamp(110px,18vw,180px);filter:drop-shadow(0 15px 25px #0009);transform:translate(-14px,10px)}
+.coin{position:absolute;z-index:3;right:16%;top:43%;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#28ffd0,#6878ff);border:4px solid #c5ffe7;color:#10205a;font-size:34px;font-weight:900;box-shadow:0 0 24px #39ffcc}
+.mascot-caption{position:absolute;z-index:3;bottom:14px;right:16px;text-align:right;color:#c8fff2;font-style:italic;line-height:1.45;letter-spacing:1px}
+.section-title{margin:30px 0 18px;font-size:28px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:22px;border:1px solid #24355e;border-radius:20px;background:linear-gradient(140deg,#0b1738,#080f28)}
+.card .icon{font-size:27px}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.55;margin:0}
+.demo{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.wallet,.notice{border:1px solid #273e75;border-radius:20px;background:#091431;padding:22px}
+.balance{padding:17px;border-radius:15px;background:linear-gradient(110deg,#25205b,#0c4c65);margin:15px 0}.balance strong{display:block;font-size:29px;margin-top:5px}
+.wallet-actions{display:flex;gap:10px;flex-wrap:wrap}.wallet-actions button{flex:1;min-width:95px}
+footer{border-top:1px solid #24355e;color:var(--muted);padding:25px;text-align:center;font-size:13px}#message{margin-top:14px;color:#60ffd2;min-height:20px;font-size:14px}
+@media(max-width:760px){nav{display:none}header{padding:15px 18px}header>.btn{padding:11px 14px;font-size:12px}main{padding-top:30px}.hero{grid-template-columns:1fr;min-height:0}.mascot,.hero-art{min-height:300px}.cards{grid-template-columns:1fr}.demo{grid-template-columns:1fr}h1{font-size:48px}}
+.hero-art{min-height:390px;border-radius:24px;background-image:linear-gradient(90deg,rgba(3,8,29,.08),rgba(3,8,29,.1)),url('avoluma-concept.png');background-size:cover;background-position:center;border:1px solid #263f83}
+</style></head>
+<body>
+<header>
+<a class="brand" href="#home" aria-label="Avoluma home"><span class="logo">A</span><span>Avoluma<small>PAY · GROW · TOGETHER</small></span></a>
+<nav><a href="#home">Home</a><a href="#about">About</a><a href="#features">Features</a><a href="#wallet">Wallet demo</a></nav>
+<button class="btn" onclick="showMessage('Wallet connection is not enabled in this demo yet.')">Connect Wallet</button>
+</header>
+<main id="home"><section class="hero"><div>
+<span class="pill">● &nbsp; A PAYMENT PROJECT IN PROGRESS</span>
+<h1><span class="gradient">Avoluma</span><br>Crypto Payments<br>for a Brighter Future</h1>
+<p class="lead">A friendly first step toward simpler digital payments. Explore the concept, test the demo interface, and help shape what comes next.</p>
+<div class="actions"><a class="btn" href="#wallet">Explore Demo &nbsp; →</a><a class="btn secondary" href="#about">Learn More</a></div><p id="message" aria-live="polite"></p>
+</div>
+<div class="hero-art" role="img" aria-label="Avoluma website visual concept"></div>
+</section>
+<section id="about"><h2 class="section-title">Simple. Secure. Global.</h2><div class="cards" id="features">
+<article class="card"><div class="icon">⚡</div><h3>Simple to use</h3><p>A clear experience designed for people who are new to digital assets.</p></article>
+<article class="card"><div class="icon">🛡️</div><h3>Safety first</h3><p>We will prioritize clear information, secure design, and careful testing.</p></article>
+<article class="card"><div class="icon">🌍</div><h3>Built for everyone</h3><p>A long-term vision for accessible digital payments across communities.</p></article>
+</div></section>
+<section class="demo" id="wallet"><div class="wallet"><h2 style="margin:0">Avoluma Wallet</h2><p style="color:var(--muted);margin-bottom:0">Interactive preview · Demo balance only</p>
+<div class="balance"><span>Demo balance</span><strong>1,250 ASPR</strong><small>Not real money or a live token</small></div>
+<div class="wallet-actions"><button class="btn" onclick="showMessage('Demo only: sending is not connected to a blockchain.')">Send</button><button class="btn secondary" onclick="showMessage('Demo only: no real receiving address has been created.')">Receive</button><button class="btn secondary" onclick="showMessage('No real transactions yet. This is a visual prototype.')">History</button></div>
+</div><div class="notice"><h2>Small payments. Big dreams.</h2><p class="lead" style="font-size:15px">We are starting with a prototype. No real funds are held or transferred, and the proposed brand and ticker still need availability checks.</p><a class="btn" href="#home">Back to top ↑</a></div></section>
+</main><footer>© Avoluma concept project · Early prototype · No live cryptocurrency or wallet connection</footer>
+<script>function showMessage(text){document.getElementById('message').textContent=text;}</script>
+</body></html>
